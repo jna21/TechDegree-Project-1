@@ -45,8 +45,8 @@ let quotes = [
   {quote:"The greatest discovery of all time is that a person can change his future by merely changing his attitude.",
   source: "Oprah Winfrey"
   }
-]
-
+];
+//used console.log below to check to make sure I can pull each property from each object correctly
 // console.log(` Student info print test. her is the Quote "${quotes[0].quote}"  Here is the book its from ${quotes[0].citation} Here is the source name and the year ${quotes[0].source} ${quotes[0].year}`)
 /***
  * `getRandomQuote` function
@@ -55,7 +55,7 @@ let chosenQuote;
 function getRandomQuote(quoteArray) {
   //create a variable that generates a random number between 0 and the last index of the quote array
   //first use Math.random to get a number within the length of the array of quotes
-  var numberPicked = Math.floor(Math.random() * quoteArray.length );
+  var numberPicked = Math.floor(Math.random() * quoteArray.length);
      //test the numberPicked to make sure its working properly using console.log - passed
      //console.log("Number Picked: " + numberPicked)
   chosenQuote = quoteArray[numberPicked];
@@ -74,10 +74,10 @@ function getRandomQuote(quoteArray) {
 
 
   function printQuote(quotes) {
-    //Created a variable calling  getRandomQuote() function
-    let callRandom = getRandomQuote(quotes)
+    //Created a variable calling getRandomQuote() function on input array
+    let callRandom = getRandomQuote(quotes);
     // Created variable to begin my  HTML quote string with "quote" class for callRandom.quote
-    let quoteString = `<p class="quote"> ${callRandom.quote} </p>`;
+    let quoteString = `<p class="quote"> ${callRandom.quote}</p>`;
        // console.log(quoteString) Tested Quote String with console.log - passed;
     quoteString += `<p class="source"> ${callRandom.source}`;
        // console.log(quoteString) Tested Quote String with console.log - passed;
