@@ -104,9 +104,24 @@ function getRandomQuote(quoteArray) {
    printQuote();
   // console.log(printQuote(quotes)); -  tested printQuote Function using console.log - passsed
 
+
+  // BACKGROUND COLOR: function to change background color on click of button
+function changeBkgdColor () {
+  //used Math.floor(Math.random) from a range of 0 - 256 to generage each of the colors for RGB color set up
+  let x = Math.floor(Math.random() * 256);
+  let y = Math.floor(Math.random() * 256);
+  let z = Math.floor(Math.random() * 256);
+  //created a variable string for the new RGB color for the body color
+  let newBkgdColor = "rgb(" + x + "," + y + "," + z + ")" 
+  //applied the new color to the specific CSS Id element for the body background color;
+  document.body.style.backgroundColor = newBkgdColor;
+  console.log(newBkgdColor);
+}
 /***
  * click event listener for the print quote button
  * DO NOT CHANGE THE CODE BELOW!!
 ***/
 
 document.getElementById('load-quote').addEventListener("click", printQuote, false);
+document.getElementById('load-quote').addEventListener("click", changeBkgdColor, false);
+//adding an event listenter to change the color of the background on the page on with new changeBackground function when button clicked
