@@ -73,7 +73,7 @@ function getRandomQuote(quoteArray) {
 // ***/
 
 
-  function printQuote(quotes) {
+  function printQuote() {
     //Created a variable calling getRandomQuote() function on input array
     let callRandom = getRandomQuote(quotes);
     // Created variable to begin my  HTML quote string with "quote" class for callRandom.quote
@@ -101,7 +101,7 @@ function getRandomQuote(quoteArray) {
     document.getElementById('quote-box').innerHTML = quoteString; 
     return quoteString;
   }
-  printQuote(quotes);
+   printQuote();
   // console.log(printQuote(quotes)); -  tested printQuote Function using console.log - passsed
 
 /***
