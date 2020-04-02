@@ -18,8 +18,10 @@ document.getElementById('load-quote').addEventListener("click", changeBkgdColor,
 //adding an event listenter to change the color of the background on the page on with new changeBackground function when button clicked
 
 //EXTRA CREDIT #3: added a timing function to make the quote automatically refresh every 20 seconds(20,000 miliseconds) using setInterval() calling on the printQuote function
+//Also added the changeBkgdColor function to this function so that the background color will change with the quote
 //referenced video on YouTube to learn how to use setInterval: https://youtu.be/CqDqHiamRHA  
 function quoteRefresh() {
-    setInterval(printQuote, 5000);
+    setInterval(printQuote, 20000);
+    setInterval(changeBkgdColor, 20000);
 }
 quoteRefresh();
