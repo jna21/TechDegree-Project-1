@@ -114,6 +114,15 @@ h1 {
   content: ", ";
   font-style: normal;
 }
+/* Extra Credit #1  - added Genre to the CSS and applied an oblique/rounded font style to make it stand out*/
+.genre {
+  font-style: oblique;
+  font-weight: lighter;
+}
+.genre:before {
+  content: ", ";
+}
+
 
 @media (min-width: 768px) {
   body {
